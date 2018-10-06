@@ -23,7 +23,9 @@
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
             <div class="col-md-3">
-                <button class="btn-primary logoutbtn">Log Out</button>
+                <form action="">
+                   <button class="custom-logout">LogOut</button>
+               </form>
             </div>
         </div>
         <div class="row">
@@ -35,7 +37,7 @@
                 <label class="labels" for="to"><b>To</b></label><br>
                 <input type="text" placeholder="To" id="to" name="to" required>
 
-                <button>Search</button>
+                <button class="search-btn">Search</button>
             </form>    
            </div>
            <div class="col-md-4 col-sm-3 col-xs-12"></div>
