@@ -99,12 +99,26 @@ if($userId==null){
 
     </div>
 
-    <div class="row">
-      <div class="col-md-4">
-
-      </div>
-      <div class="col-md-4"></div>
-      <div class="col-md-4"></div>
+    <div class="row driverlist">
+        <div class="col-md-4 photopanel">
+          <img src="Assets/bg.jpg" class="driverphoto" alt="">
+        </div>
+        <div class="col-md-4 driverdesc">
+          <div class="col-md-6">
+            Name:<br>
+            From:<br>
+            Destination:<br>
+            Depart.Time:<br>
+          </div>
+          <div class="col-md-6">
+            
+          </div>    
+        
+        </div>
+        <div class="col-md-4 amountpanel">
+          <p class="amount">Amount:</p>
+          <a class="driverdetails" href="driverdetails.php">View Driver</a>
+        </div>
     </div>';
   }
  ?>
