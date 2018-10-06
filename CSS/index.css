@@ -1,16 +1,15 @@
 /*logo*/
 .logopanel{
     background-color: black;
-    height: 50px;
+    
 }
 
 #logo{
-    width: 10%;
-    height:10%;
-}
+    width: 100%;
+} 
 
-.loginbtn{
-    margin: 10px 0 auto 0;
+#loginlink{
+    margin: 0 auto;
 }
 
 /* */
