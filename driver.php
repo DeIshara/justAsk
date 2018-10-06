@@ -23,13 +23,16 @@
               <button class="btn-primary signOutbtn">Sign Out</button>
           </div>
       </div>
+
+
   <div class="row frm">
     <form class="form-horizontal">
-     <div class="form-group">
-       <label class="control-label col-sm-2" for="Location">Current Location</label>
-       <div class="col-sm-10">
+      <div class="form-group">
+        <form action="">
+          <label class="control-label col-sm-2" for="Location">Current Location</label>
+          <div class="col-sm-10">
           <input type="text" class="form-control" id="name" placeholder="Enter name">
-    </div>
+      </div>
     </div>
     <div class="form-group">
    <label class="control-label col-sm-2" for="Destination">Travelling To:</label>
@@ -55,6 +58,7 @@
      <button type="submit" class="btn btn-default">Submit</button>
    </div>
  </div>
+</div>
 </div>
 </div>
 </form>
