@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row logopanel">
             <div class="col-md-3">
-                <img id="logo" src="" alt="">
+                <img id="logo" src="Assets/justASK.png" alt="">
             </div>
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
