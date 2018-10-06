@@ -55,19 +55,28 @@
 
 <!-- user -->
         <div class="row">
-           <div class="col-md-4 col-sm-6 col-xs-12">
-           <form>
-                <label class="labels" for="from"><b>From</b></label><br>
-                <input type="text" placeholder="From" id="from" name="from" required><br>
-            
-                <label class="labels" for="to"><b>To</b></label><br>
-                <input type="text" placeholder="To" id="to" name="to" required>
+          <div class="col-md-4"></div>
+          <div class="col-md-4 formpanel">
+            <form>
+                  <label class="labels" for="from">From</label><br>
+                  <input type="text" placeholder="From" id="from" name="from" required><br>
+              
+                  <label class="labels" for="to">To</label><br>
+                  <input type="text" placeholder="To" id="to" name="to" required><br>
 
-                <button class="search-btn">Search</button>
-            </form>    
-           </div>
-           <div class="col-md-4 col-sm-3 col-xs-12"></div>
-           <div class="col-md-4 col-sm-3 col-xs-12"></div>
+                  <button class="submit-btn">Search</button>
+              </form>    
+            </div>
+            <div class="col-md-4"></div>
+            
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
         </div>
 <!--  -->
 
