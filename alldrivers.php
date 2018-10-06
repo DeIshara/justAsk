@@ -23,7 +23,7 @@ require_once 'includes/database.include.php';
  $count = $query->num_rows; 
  
  if ( $count>0) {
- //  $_SESSION['userSession4'] = $row['id'];
+   $_SESSION['userSession4'] = $row['driverId'];
 
 echo '<table>';
 
@@ -34,47 +34,47 @@ echo $row['firstName'];
 echo '</td>';
           
 echo '<td>';
-echo $row['email'];
+echo $row['lastName'];
 echo '</td>';
            
-// echo '<td>';
-// echo $row['phone'];
-// echo '</td>';
+echo '<td>';
+echo $row['email'];
+echo '</td>';
                        
-// echo '<td>';
-// echo $row['nationality'];
-// echo '</td>';
+echo '<td>';
+echo $row['birthDay'];
+echo '</td>';
 
-// echo '<td>';
-// echo $row['city'];
-// echo '</td>';
-// echo '<td>';
-// echo $row['nights'];
-// echo '</td>';
+echo '<td>';
+echo $row['NIC'];
+echo '</td>';
+echo '<td>';
+echo $row['telephone'];
+echo '</td>';
 
-// echo '<td>';
-// echo $row['adult'];
-// echo '</td>';
+echo '<td>';
+echo $row['vehicle'];
+echo '</td>';
           
-// echo '<td>';
-// echo $row['kid'];
-// echo '</td>';
+echo '<td>';
+echo $row['address1'];
+echo '</td>';
            
-// echo '<td>';
-// echo $row['baby'];
-// echo '</td>';
+echo '<td>';
+echo $row['address2'];
+echo '</td>';
                        
-// echo '<td>';
-// echo $row['destination'];
-// echo '</td>';
+echo '<td>';
+echo $row['address3'];
+echo '</td>';
 
-// echo '<td>';
-// echo $row['massages'];
-// echo '</td>';
+echo '<td>';
+echo $row['status'];
+echo '</td>';
 
 
 echo '<td>';
-echo '<a href="update_customer.php" style="text-decoration: none;" >Edit </a>';
+echo '<a href="driverDelete.php" style="text-decoration: none;" >Delete </a>';
 echo '</td>';
 /*
 echo '<td>';
@@ -84,7 +84,7 @@ echo '<td>';
 echo '<a href="reset.php" style="text-decoration: none;" >Reset Password </a>';
 echo '</td>';*/
 echo '</tr><br>'; 
-
+echo '</table>';
 
 while($row= $query->fetch_assoc())
            {
@@ -97,54 +97,54 @@ echo $row['firstName'];
 echo '</td>';
           
 echo '<td>';
-echo $row['email'];
+echo $row['lastName'];
 echo '</td>';
            
-// echo '<td>';
-// echo $row['phone'];
-// echo '</td>';
+echo '<td>';
+echo $row['email'];
+echo '</td>';
                        
-// echo '<td>';
-// echo $row['nationality'];
-// echo '</td>';
+echo '<td>';
+echo $row['birthDay'];
+echo '</td>';
 
-// echo '<td>';
-// echo $row['city'];
-// echo '</td>';
-// echo '<td>';
-// echo $row['nights'];
-// echo '</td>';
+echo '<td>';
+echo $row['NIC'];
+echo '</td>';
+echo '<td>';
+echo $row['telephone'];
+echo '</td>';
 
-// echo '<td>';
-// echo $row['adult'];
-// echo '</td>';
+echo '<td>';
+echo $row['vehicle'];
+echo '</td>';
           
-// echo '<td>';
-// echo $row['kid'];
-// echo '</td>';
+echo '<td>';
+echo $row['address1'];
+echo '</td>';
            
-// echo '<td>';
-// echo $row['baby'];
-// echo '</td>';
+echo '<td>';
+echo $row['address2'];
+echo '</td>';
                        
-// echo '<td>';
-// echo $row['destination'];
-// echo '</td>';
+echo '<td>';
+echo $row['address3'];
+echo '</td>';
 
-// echo '<td>';
-// echo $row['massages'];
-// echo '</td>';
+echo '<td>';
+echo $row['status'];
+echo '</td>';
 
 
 echo '<td>';
-echo '<a href="update_customer.php" style="text-decoration: none;" >Edit </a>';
+echo '<a href="driverDelete.php" style="text-decoration: none;" >Delete </a>';
 echo '</td>';
 /*
 echo '<td>';
 echo '<a href="reset.php" style="text-decoration: none;" >Reset Password </a>';
 echo '</td>';*/
 echo '</tr><br>';
-
+echo '</table>';
 }
 }
 
