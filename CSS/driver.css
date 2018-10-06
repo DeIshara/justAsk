@@ -6,9 +6,11 @@
     max-width: 50%;
 }
 
-
+.greet{
+    color:white ;
+    font-size: 20px;
+}
 .custom-logout{
-    margin: 5px;
     padding: 10px;
     color: white;
     border-radius: 5px;
@@ -41,3 +43,46 @@ input[type="text"]{
     border: none;
 
 }
+/* user */
+.driverphoto{
+    width:50%;
+}
+.photopanel{
+    padding:10px;
+    text-align:center;
+}
+
+
+.driverlist{
+    background-color: black;
+    margin-top: 10px;
+}
+
+.driverdesc{
+    margin-top: 10px;
+    padding: 10px;
+    background-color:#dfdfdf ;
+}
+
+.amountpanel{
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+ /*  */
+
+ .adminlinks{
+     color: white;
+     display: block;
+     width: 100%;
+     padding: 10px;
+     margin: 5px;
+     background-color: rgb(17, 202, 33);
+ }
+
+ .adminlinks:hover{
+     color: white;
+     text-decoration: none;
+     background-color: rgb(12, 150, 23);
+ }
