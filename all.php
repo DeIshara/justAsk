@@ -110,7 +110,9 @@ if($userId==null){
 
 
   <!-- admin -->
-        <div class="row">
+  <?php
+    if ($role=='admin') {
+        echo '<div class="row">
           <div class="col-md-4"></div>
           <div class="col-md-4 formpanel">
             <a class="adminlinks" href="http://">All drivers</a>
@@ -118,7 +120,9 @@ if($userId==null){
             <a class="adminlinks" href="http://">Requests</a>
           </div>
           <div class="col-md-4"></div>
-        </div>
+        </div>';
+    }
+  ?>
 <!--  -->
 
   </div>
