@@ -1,5 +1,5 @@
 <?php
-
+  include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +25,9 @@
 
                 <label class="labels" for="last"><b>Last Name</b></label><br>
                 <input type="text" placeholder="Last Name" id="last" name="lastName" required><br>
+
+                <label class="labels" for="user"><b>User Name</b></label><br>
+                <input type="text" placeholder="User Name" id="user" name="userName" required><br>
 
                 <label class="labels" for="email"><b>Email</b></label><br>
                 <input type="text" placeholder="Email" id="email" name="email" required><br>

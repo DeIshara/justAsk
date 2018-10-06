@@ -1,5 +1,8 @@
 <?php
-
+  include 'header.php';
+  if(isset($_SESSION['userName'])){
+    header("Location: search.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +18,7 @@
 
 </head>
 <body>
+
     <div class="container">
         <div class="row">
                 <div class="col-md-7 custom-left">
@@ -22,9 +26,9 @@
                 </div>
                 <div class="col-md-5 custom-right">
                           <div class="loginbox">
-                                    <form class="modal-content loginform" action="/action_page.php">
-                                        <label class="labels" for="NIC"><b>NIC No</b></label>
-                                        <input type="text" placeholder="NIC" id="NIC" name="NIC" required>
+                                    <form class="modal-content loginform" action="includes/login.include.php" method="POST" enctype="multipart/form-data">
+                                        <label class="labels" for="username"><b>User Name</b></label>
+                                        <input type="text" placeholder="User Name" id="NIC" name="userName" required>
 
                                         <label class="labels" for="password"><b>Password</b></label>
                                         <input type="password" placeholder="Password"id="password" name="password" required>

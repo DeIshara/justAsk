@@ -6,6 +6,7 @@
 
   $firstName=$_POST['firstName'];
   $lastName=$_POST['lastName'];
+  $userName=$_POST['userName'];
   $birthDay=$_POST['birthDay'];
   $NIC=$_POST['NIC'];
   $telephone=$_POST['telephone'];
@@ -21,18 +22,18 @@
     header("Location: ../newdriver.php?error=password");
   }
   else{
-    $sql="SELECT NIC FROM driverInfo WHERE NIC='$NIC'";
+    $sql="SELECT userName FROM driver WHERE userName='$userName'";
     $result=$conn->query($sql);
-    $NICCheck=mysqli_num_rows($result);
+    $userNameCheck=mysqli_num_rows($result);
 
-    if($NICCheck>0){
-      header("Location: ../newdriver.php?error=NIC");
+    if($userNameCheck>0){
+      header("Location: ../newdriver.php?error=UsernameAlreadyExists");
       exit();
     }
     else{
       $encriptedPassword=md5($password);
-      $sql="INSERT INTO driver(firstName,lastName,birthDay,NIC,telephone,vehicle,address1,address2,address3,email,password,status)
-            VALUES('$firstName','$lastName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword','0')";
+      $sql="INSERT INTO driver(firstName,lastName,userName,birthDay,NIC,telephone,vehicle,address1,address2,address3,email,password,status)
+            VALUES('$firstName','$lastName','$userName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword','0')";
       $result=$conn->query($sql);
       echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
       //echo("Error description: " . mysqli_error($conn));
