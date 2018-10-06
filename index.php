@@ -1,4 +1,4 @@
-<?php   
+<?php
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
         <div class="row">
             
             <div class="custom-jumbotron">
-          
+
 
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
@@ -37,14 +37,14 @@
                             <a class="btn btn-primary btn-lg">Ask Now</a>
                         </p>
                     </div>
-                   
+
                 </div>
                 <div class="col-md-4"></div>
-                   
-               
+
+
             </div>
-               
-            
+
+
         </div>
         <div class="row aboutus">
                 <div class="col-md-4"></div>
@@ -53,7 +53,7 @@
         </div>
 
         <div class="row foot">
-          
+
         </div>
     </div>
 </body>
