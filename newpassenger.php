@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SignUp-Passenger</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    <link rel="stylesheet" type="text/css" media="screen" href="CSS/Signup.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/Signup.css" />
 
 </head>
 <body>
@@ -17,12 +18,15 @@
 
         <div class="formcontainer">
         <h1>Register As a Passenger</h1>
-        <form action="includes/newuser.include.php" method="POST" enctype="multipart/form-data">
+        <form action="includes/passengersignup.include.php" method="POST" enctype="multipart/form-data">
                 <label class="labels" for="first"><b>First Name</b></label><br>
                 <input type="text" placeholder="First Name" id="first" name="firstName" required><br>
 
                 <label class="labels" for="last"><b>Last Name</b></label><br>
                 <input type="text" placeholder="Last Name" id="last" name="lastName" required><br>
+
+                <label class="labels" for="user"><b>User Name</b></label><br>
+                <input type="text" placeholder="User Name" id="user" name="userName" required><br>
 
                 <label class="labels" for="email"><b>Email</b></label><br>
                 <input type="email" placeholder="Email" id="email" name="email" required><br>

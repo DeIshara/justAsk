@@ -33,7 +33,7 @@
                                     </form>
                                     <div class="modal-content signupbox">
                                        <p> New Driver ? <a href="newdriver.php">Create an Account</a></p>
-                                       <p> New Passenger ? <a href="newuser.php">Create an Account</a></p>
+                                       <p> New Passenger ? <a href="newpassenger.php">Create an Account</a></p>
                                     </div>
                            </div>
 
