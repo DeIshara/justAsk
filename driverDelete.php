@@ -2,10 +2,10 @@
 session_start();
 require_once 'includes/database.include.php';
 
-$query = "DELETE FROM driver WHERE driverId='" . $_SESSION['userSession6'] . "'";
+$query = "DELETE FROM driver WHERE driverId='" . $_SESSION['userSession4'] . "'";
 
 mysqli_query($conn,$query);
-header("Location:request.php");
+header("Location:alldrivers.php");
 
 
 ?>
