@@ -108,9 +108,19 @@ if($userId==null){
 
 <!--  -->
 
-<!-- admin -->
 
+  <!-- admin -->
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 formpanel">
+            <a class="adminlinks" href="http://">All drivers</a>
+            <a class="adminlinks" href="http://">Passengers</a>
+            <a class="adminlinks" href="http://">Requests</a>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
 <!--  -->
+
   </div>
 
 
