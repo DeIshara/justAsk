@@ -3,7 +3,6 @@
 include 'header.php';
 if(!isset($_SESSION['userName'])){
   header("Location: login.php");
-
 }
 else {
   $role= $_SESSION['role'];
@@ -52,18 +51,24 @@ if($userId==null){
     echo '<div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4 formpanel">
-        <form action="">
+        <form action="includes/addhire.include.php" method="POST" enctype="multipart/form-data">
           <label for="currentloc">Current Location :</label><br>
-          <input type="text" id="currentloc"><br>
+          <input type="text" id="currentLoc" name="currentLoc"><br>
 
-          <label for="destination">Travelling To :</label><br>
-          <input type="text" id="destination"><br>
+          <label for="travellingTo">Travelling To :</label><br>
+          <input type="text" id="travellingTo" name="travellingTo"><br>
 
           <label for="seats">Seats</label><br>
-          <input type="text" id="seats"><br>
+          <input type="text" id="seats" name="seats"><br>
 
-          <label for="depart">Departure</label><br>
-          <input type="time" id="depart"><br>
+          <label for="amount">Amount</label><br>
+          <input type="text" id="amount" name="amount"><br>
+
+          <label for="departureDate">Departure Date</label><br>
+          <input type="date" id="departureDate" name="departureDate"><br>
+
+          <label for="departureTime">Departure Time</label><br>
+          <input type="time" id="departureTime" name="departureTime"><br>
 
           <button class="submit-btn">Submit</button>
         </form>

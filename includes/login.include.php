@@ -15,6 +15,7 @@
 
       if(!$row=$result->fetch_assoc()){
         echo "Your username or password is incorrect";
+        header("Location: ../login.php?error=incorrectUsernameOrPassword");
       }else{
         $_SESSION['userName']=$row['userName'];
         $_SESSION['role']='customer';

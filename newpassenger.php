@@ -1,5 +1,9 @@
 <?php
   include 'header.php';
+  if(isset($_SESSION['userName'])){
+    header("Location: all.php");
+
+  }
 ?>
 
 <!DOCTYPE html>
