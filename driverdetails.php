@@ -1,4 +1,5 @@
 <?php
+  include 'header.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +44,7 @@
                Vehicle
             </div>
         </div>
-    </div>    
+    </div>
 
 </body>
 </html>

@@ -1,4 +1,20 @@
 <?php
+
+  include 'header.php';
+  if(isset($_SESSION['userName'])){
+    echo $_SESSION['role'];
+
+  }
+
+  /*$sql="SELECT amount FROM wallet WHERE userId='$userId'";
+  $result=$conn->query($sql);
+  $raw=$result->fetch_assoc();
+  $lastAmount=$raw['amount'];
+
+  if($userId==null){
+    header("Location: signup.php");
+    exit();
+  }*/
 ?>
 
 <!DOCTYPE html>
@@ -12,13 +28,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-   
+
 </head>
 <body>
+
     <div class="container">
         <div class="row logopanel">
             <div class="col-md-3">
-                <img id="logo" src="Assets/justASK.png" alt="">
+                <img id="logo" src="" alt="">
             </div>
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
@@ -33,12 +50,12 @@
            <form>
                 <label class="labels" for="from"><b>From</b></label><br>
                 <input type="text" placeholder="From" id="from" name="from" required><br>
-            
+
                 <label class="labels" for="to"><b>To</b></label><br>
                 <input type="text" placeholder="To" id="to" name="to" required>
 
                 <button class="search-btn">Search</button>
-            </form>    
+            </form>
            </div>
            <div class="col-md-4 col-sm-3 col-xs-12"></div>
            <div class="col-md-4 col-sm-3 col-xs-12"></div>
