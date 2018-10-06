@@ -13,7 +13,9 @@
     margin: 10px 0 auto 0;
 }
 
+/* */
 
+/* jumbotron */
 .custom-jumbotron{
     background-color: aquamarine;
     border-radius: 10px;
@@ -29,7 +31,7 @@
     height: 300px;
     background-color:grey;
 }
-
+/* footer */
 .foot{
     
     color: white;

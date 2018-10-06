@@ -46,7 +46,11 @@ a:hover{
 }
 
 
-/* forms */
+
+
+
+
+
 input[type=text], input[type=password],select {
     width: 80%;
     margin: 5px auto 15px auto;
