@@ -61,6 +61,9 @@ if($userId==null){
 
           <label for="seats">Seats</label><br>
           <input type="text" id="seats"><br>
+          
+          <label for="amount">Amount</label><br>
+          <input type="text" id="amount"><br>
 
           <label for="depart">Departure</label><br>
           <input type="time" id="depart"><br>
