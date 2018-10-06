@@ -1,4 +1,22 @@
 <?php
+
+include 'header.php';
+if(!isset($_SESSION['userName'])){
+  header("Location: login.php");
+
+}
+else {
+  $role= $_SESSION['role'];
+}
+/*$sql="SELECT amount FROM wallet WHERE userId='$userId'";
+$result=$conn->query($sql);
+$raw=$result->fetch_assoc();
+$lastAmount=$raw['amount'];
+
+if($userId==null){
+  header("Location: signup.php");
+  exit();
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -17,19 +35,21 @@
       <div class="col-md-3 col-sm-3 col-xs-12">
         <img id="logo" src="Assets/justASK.png" alt="">
       </div>
-              
+
       <div class="col-md-3 col-sm-3 col-xs-12"></div>
-              
+
       <div class="col-md-3 col-sm-3 col-xs-12"></div>
-              
-      <div class="col-md-3 col-sm-3 col-xs-12 signout-panel">          
-        <form action="">
+
+      <div class="col-md-3 col-sm-3 col-xs-12 signout-panel">
+        <form action="includes/logout.include.php" method="POST" enctype="multipart/form-data">
           <button class="custom-logout">LogOut</button>
         </form>
       </div>
     </div>
 <!-- driver -->
-    <div class="row">
+<?php
+  if ($role=='driver') {
+    echo '<div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4 formpanel">
         <form action="">
@@ -49,42 +69,50 @@
         </form>
       </div>
       <div class="col-md-4"></div>
-      
-    </div>
+
+    </div>';
+  }
+ ?>
+
 <!--  -->
 
 <!-- user -->
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4 formpanel">
-            <form>
-                  <label class="labels" for="from">From</label><br>
-                  <input type="text" placeholder="From" id="from" name="from" required><br>
-              
-                  <label class="labels" for="to">To</label><br>
-                  <input type="text" placeholder="To" id="to" name="to" required><br>
+<?php
+  if ($role=='customer') {
+    echo '<div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 formpanel">
+        <form>
+              <label class="labels" for="from">From</label><br>
+              <input type="text" placeholder="From" id="from" name="from" required><br>
 
-                  <button class="submit-btn">Search</button>
-              </form>    
-            </div>
-            <div class="col-md-4"></div>
-            
-        </div>
+              <label class="labels" for="to">To</label><br>
+              <input type="text" placeholder="To" id="to" name="to" required><br>
 
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
+              <button class="submit-btn">Search</button>
+          </form>
         </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>';
+  }
+ ?>
+
 <!--  -->
 
 <!-- admin -->
 
 <!--  -->
   </div>
-  
+
 
 </body>
 

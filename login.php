@@ -1,7 +1,7 @@
 <?php
   include 'header.php';
   if(isset($_SESSION['userName'])){
-    header("Location: search.php");
+    header("Location: all.php");
   }
 ?>
 

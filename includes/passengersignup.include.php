@@ -36,6 +36,6 @@
       //echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
       //echo("Error description: " . mysqli_error($conn));
 
-      header("Location: ../index.php");
+      header("Location: ../login.php");
     }
   }
