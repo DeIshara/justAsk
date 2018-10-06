@@ -1,5 +1,5 @@
 <?php
-
+  include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +25,9 @@
 
                 <label class="labels" for="last"><b>Last Name</b></label><br>
                 <input type="text" placeholder="Last Name" id="last" name="lastName" required><br>
+
+                <label class="labels" for="user"><b>User Name</b></label><br>
+                <input type="text" placeholder="User Name" id="user" name="userName" required><br>
 
                 <label class="labels" for="email"><b>Email</b></label><br>
                 <input type="text" placeholder="Email" id="email" name="email" required><br>
@@ -57,7 +60,7 @@
                 <input type="text" placeholder="Vehicle" id="vehicle" name="vehicle" required><br>
 
                 <label class="labels" for="driverPhoto"><b>Photo</b></label><br>
-                <input type="file" placeholder="Photo" accept="image/jpeg" id="driverPhoto" name="driverPhoto" required><br>
+                <input type="file" placeholder="Photo"id="driverPhoto" name="driverPhoto" required><br>
 
                  <label class="labels" for="vehiclePhoto"><b>Vehicle photo</b></label><br>
                 <input type="file" placeholder="Vehicle photo"id="vehiclePhoto" name="vehiclePhoto" required><br>
