@@ -7,14 +7,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SignUp</title>
+    <title>SignUp-Driver</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    <link rel="stylesheet" type="text/css" media="screen" href="CSS/Signup.css" />
     
 </head>
 <body>
     <div class="container">
+       
+           
+        
         <div class="formcontainer">
+        <h1>Register As a Driver</h1>
         <form action="includes/" method="POST" enctype="multipart/form-data">
                 <label class="labels" for="first"><b>First Name</b></label><br>
                 <input type="text" placeholder="First Name" id="first" name="firstName" required><br>
@@ -41,10 +45,10 @@
                 <input type="text" placeholder="Address1"id="address1" name="address1" required><br>
 
                 <label class="labels address" for="address2"><b>Address2</b></label><br>
-                <input type="text" placeholder="Address2"id="address2" name="address2" required><br>
+                <input type="text" placeholder="Address2"id="address2" name="address2"><br>
                 
                 <label class="labels address" for="address3"><b>Address3</b></label><br>
-                <input type="text" placeholder="Address3"id="address3" name="address3" required><br>
+                <input type="text" placeholder="Address3"id="address3" name="address3"><br>
 
                  <label class="labels" for="driverPhoto"><b>Photo</b></label><br>
                 <input type="file" placeholder="Photo"id="driverPhoto" name="driverPhoto" required><br>
