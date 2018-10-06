@@ -25,7 +25,7 @@
     $userNameCheck=mysqli_num_rows($result);
 
     if($userNameCheck>0){
-      header("Location: ../newpassenger.php?error=NIC");
+      header("Location: ../newpassenger.php?error=usernameAlreadyExists");
       exit();
     }
     else{
@@ -34,9 +34,8 @@
             VALUES('$firstName','$lastName','$userName','$birthDay','$telephone','$address1','$address2','$address3','$email','$encriptedPassword')";
       $result=$conn->query($sql);
       //echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
-      echo("Error description: " . mysqli_error($conn));
+      //echo("Error description: " . mysqli_error($conn));
 
-
-      //header("Location: ../login.php");
+      header("Location: ../index.php");
     }
   }
