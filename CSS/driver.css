@@ -1,0 +1,43 @@
+.logopanel{
+    background-color: black;
+    text-align: center;
+}
+#logo{
+    max-width: 50%;
+}
+
+
+.custom-logout{
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.signout-panel{
+    text-align: center;
+}
+
+
+.formpanel{
+    padding: 10px;
+    margin-top: 10px;
+    text-align:center;
+    background-color: #dfdfdf ;
+}
+
+input[type="text"]{
+    width: 80%;
+}
+
+.submit-btn{
+    margin: 10px;
+    width: 25%;
+    color:white;
+    background-color: rgb(17, 202, 33);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+
+}
