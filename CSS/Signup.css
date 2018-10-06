@@ -1,0 +1,50 @@
+
+/* forms */
+
+form{
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+   
+  
+}
+
+.formcontainer{
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(27,31,35,0.2);
+}
+
+input[type=text], input[type=password], input[type=date] {
+    width: 80%;
+    margin: 5px auto 15px auto;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    padding: 5px;
+}
+
+
+input[type=text]:focus, input[type=password]:focus ,select:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+
+button {
+    background-color: #28a745;
+    background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+    color: white;
+    border: 1px solid rgba(27,31,35,0.2);
+    border-radius: 0.25em !important;
+    margin: 0 auto !important;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
