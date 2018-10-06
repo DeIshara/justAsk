@@ -45,8 +45,18 @@ button:hover {
 
 
 form{
-    max-width: 30%;
+    max-width: 100%;
 }
 
 
 /*  */
+
+.driverimg{
+    width: 100%;
+
+}
+
+.driverimgpanel{
+    height: 200px;
+    background-color: #34d058;
+}
