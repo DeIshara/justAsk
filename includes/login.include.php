@@ -18,11 +18,11 @@
       }else{
         $_SESSION['userName']=$row['userName'];
         $_SESSION['role']='customer';
-        header("Location: ../search.php");
+        header("Location: ../all.php");
       }
 
     }else{
       $_SESSION['userName']=$row['userName'];
       $_SESSION['role']='driver';
-      header("Location: ../search.php");
+      header("Location: ../all.php");
     }
