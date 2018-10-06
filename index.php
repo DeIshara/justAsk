@@ -14,13 +14,13 @@
 <body>
     <div class="container">
         <div class="row logopanel">
-            <div class="col-md-3">
-                <img id="logo" src="" alt="">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <img id="logo" src="Assets/justASK.png" alt="">
             </div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <button class="btn-primary loginbtn">Log In</button>
+            <div class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-md-3 col-sm-3 col-xs-12 login">
+                <a id="loginlink" href="login.php">Log In</a>
             </div>
         </div>
         <div class="row">
