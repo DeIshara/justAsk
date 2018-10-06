@@ -25,21 +25,21 @@
                                     <form class="modal-content loginform" action="/action_page.php">
                                         <label class="labels" for="NIC"><b>NIC No</b></label>
                                         <input type="text" placeholder="NIC" id="NIC" name="NIC" required>
-        
+
                                         <label class="labels" for="password"><b>Password</b></label>
                                         <input type="password" placeholder="Password"id="password" name="password" required>
 
                                         <button>Sign In</button>
-                                    </form>    
+                                    </form>
                                     <div class="modal-content signupbox">
-                                       <p> New Driver ? <a href="Signup.html">Create an Account</a></p>
-                                       <p> New Passenger ? <a href="Signup.html">Create an Account</a></p>
+                                       <p> New Driver ? <a href="newdriver.php">Create an Account</a></p>
+                                       <p> New Passenger ? <a href="newuser.php">Create an Account</a></p>
                                     </div>
                            </div>
-                        
+
                 </div>
         </div>
-       
+
     </div>
 </body>
 </html>
