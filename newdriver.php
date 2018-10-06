@@ -50,7 +50,10 @@
                 <label class="labels address" for="address3"><b>Address3</b></label><br>
                 <input type="text" placeholder="Address3"id="address3" name="address3"><br>
 
-                 <label class="labels" for="driverPhoto"><b>Photo</b></label><br>
+                 <label class="labels" for="vehicle"><b>Vehicle</b></label><br>
+                <input type="file" placeholder="Vehicle" id="vehicle" name="vehicle" required><br>
+
+                <label class="labels" for="driverPhoto"><b>Photo</b></label><br>
                 <input type="file" placeholder="Photo"id="driverPhoto" name="driverPhoto" required><br>
 
                  <label class="labels" for="vehiclePhoto"><b>Vehicle photo</b></label><br>
