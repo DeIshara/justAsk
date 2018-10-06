@@ -18,7 +18,7 @@
   $rePassword=$_POST['rePassword'];
 
   if($password!=$rePassword){
-    header("Location: ../newdriver.php?error=NIC");
+    header("Location: ../newdriver.php?error=password");
   }
   else{
     $sql="SELECT NIC FROM driverInfo WHERE NIC='$NIC'";
@@ -31,12 +31,12 @@
     }
     else{
       $encriptedPassword=md5($password);
-      $sql="INSERT INTO driverInfo(firstName,lastName,birthday,NIC,telephone,vehicle,address1,address2,address3,email,password)
-            VALUES('$firstName','$lastName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword')";
+      $sql="INSERT INTO driver(firstName,lastName,birthDay,NIC,telephone,vehicle,address1,address2,address3,email,password,status)
+            VALUES('$firstName','$lastName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword','0')";
       $result=$conn->query($sql);
       echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
       //echo("Error description: " . mysqli_error($conn));
-      
+
 
       header("Location: ../login.php");
     }

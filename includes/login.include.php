@@ -1,17 +1,32 @@
 <?php
   session_start();
-  include '../database.php';
+  include '../database.include.php';
   date_default_timezone_set("Asia/Colombo");
-  $userName=$_POST['userName'];
+  $NIC=$_POST['NIC'];
   $password=$_POST['password'];
+  $encriptedPassword=md5($password);
 
-  $sql="SELECT * FROM user WHERE userName='$userName' AND password='$password'";
-  $result=$conn->query($sql);
+  if(substr($NIC, -1)=='v' && strlen($NIC)==10){
+    $sql="SELECT * FROM driverinfo WHERE NIC='$NIC' AND password='$encriptedPassword'";
+    $result=$conn->query($sql);
 
-  if(!$row=$result->fetch_assoc()){
-    echo "Your username or password is incorrect";
-  }else{
-    $_SESSION['userId']=$row['userId'];
+    if(!$row=$result->fetch_assoc()){
+      echo "Your username or password is incorrect";
+    }else{
+      //$_SESSION['userId']=$row['userId'];
+    }
+  }
+  else {
+    $sql="SELECT * FROM customerInfo WHERE userName='$NIC' AND password='$encriptedPassword'";
+    $result=$conn->query($sql);
+
+    if(!$row=$result->fetch_assoc()){
+      echo "Your username or password is incorrect";
+    }else{
+      //$_SESSION['userId']=$row['userId'];
+    }
   }
 
-  header("Location: ../home.php");
+
+
+  header("Location: ../index.php");
