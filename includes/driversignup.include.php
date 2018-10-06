@@ -18,7 +18,7 @@
   $rePassword=$_POST['rePassword'];
 
   if($password!=$rePassword){
-    header("Location: ../signup.php?error=password");
+    header("Location: ../newdriver.php?error=NIC");
   }
   else{
     $sql="SELECT NIC FROM driverInfo WHERE NIC='$NIC'";
@@ -26,7 +26,7 @@
     $NICCheck=mysqli_num_rows($result);
 
     if($NICCheck>0){
-      header("Location: ../signup.php?error=NIC");
+      header("Location: ../newdriver.php?error=NIC");
       exit();
     }
     else{
@@ -35,7 +35,7 @@
             VALUES('$firstName','$lastName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword')";
       $result=$conn->query($sql);
       echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
-      //echo("Error description: " . mysqli_error($con));
+      echo("Error description: " . mysqli_error($conn));
       /*$sql="SELECT userId FROM user WHERE userName='$userName' AND password='$password'";
       $result=$conn->query($sql);
       $raw=$result->fetch_assoc();

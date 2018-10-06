@@ -19,7 +19,7 @@
 
         <div class="formcontainer">
         <h1>Register As a Driver</h1>
-        <form action="includes/" method="POST" enctype="multipart/form-data">
+        <form action="includes/driversignup.include.php" method="POST" enctype="multipart/form-data">
                 <label class="labels" for="first"><b>First Name</b></label><br>
                 <input type="text" placeholder="First Name" id="first" name="firstName" required><br>
 
