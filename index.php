@@ -1,4 +1,5 @@
-<?php   
+<?php
+include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,19 +15,19 @@
 <body>
     <div class="container">
         <div class="row logopanel">
-            <div class="col-md-3">
-                <img id="logo" src="" alt="">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <img id="logo" src="Assets/justASK.png" alt="">
             </div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <button class="btn-primary loginbtn">Log In</button>
+            <div class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-md-3 col-sm-3 col-xs-12 login">
+                <a id="loginlink" href="login.php">Log In</a>
             </div>
         </div>
         <div class="row">
-            
+
             <div class="custom-jumbotron">
-          
+
 
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
@@ -37,14 +38,14 @@
                             <a class="btn btn-primary btn-lg">Ask Now</a>
                         </p>
                     </div>
-                   
+
                 </div>
                 <div class="col-md-4"></div>
-                   
-               
+
+
             </div>
-               
-            
+
+
         </div>
         <div class="row aboutus">
                 <div class="col-md-4"></div>
@@ -53,7 +54,7 @@
         </div>
 
         <div class="row foot">
-          
+
         </div>
     </div>
 </body>

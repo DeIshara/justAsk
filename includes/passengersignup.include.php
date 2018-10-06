@@ -8,9 +8,7 @@
   $lastName=$_POST['lastName'];
   $userName=$_POST['userName'];
   $birthDay=$_POST['birthDay'];
-  $NIC=$_POST['NIC'];
   $telephone=$_POST['telephone'];
-  $vehicle=$_POST['vehicle'];
   $address1=$_POST['address1'];
   $address2=$_POST['address2'];
   $address3=$_POST['address3'];
@@ -19,25 +17,24 @@
   $rePassword=$_POST['rePassword'];
 
   if($password!=$rePassword){
-    header("Location: ../newdriver.php?error=password");
+    header("Location: ../newpassenger.php?error=password");
   }
   else{
-    $sql="SELECT userName FROM driver WHERE userName='$userName'";
+    $sql="SELECT userName FROM customer WHERE userName='$userName'";
     $result=$conn->query($sql);
     $userNameCheck=mysqli_num_rows($result);
 
     if($userNameCheck>0){
-      header("Location: ../newdriver.php?error=UsernameAlreadyExists");
+      header("Location: ../newpassenger.php?error=usernameAlreadyExists");
       exit();
     }
     else{
       $encriptedPassword=md5($password);
-      $sql="INSERT INTO driver(firstName,lastName,userName,birthDay,NIC,telephone,vehicle,address1,address2,address3,email,password,status)
-            VALUES('$firstName','$lastName','$userName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword','0')";
+      $sql="INSERT INTO customer(firstName,lastName,userName,birthDay,telephone,address1,address2,address3,email,password)
+            VALUES('$firstName','$lastName','$userName','$birthDay','$telephone','$address1','$address2','$address3','$email','$encriptedPassword')";
       $result=$conn->query($sql);
-      echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
+      //echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
       //echo("Error description: " . mysqli_error($conn));
-
 
       header("Location: ../login.php");
     }

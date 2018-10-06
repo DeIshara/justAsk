@@ -1,17 +1,28 @@
 <?php
   session_start();
-  include '../database.php';
+  include 'database.include.php';
   date_default_timezone_set("Asia/Colombo");
   $userName=$_POST['userName'];
   $password=$_POST['password'];
+  $encriptedPassword=md5($password);
 
-  $sql="SELECT * FROM user WHERE userName='$userName' AND password='$password'";
-  $result=$conn->query($sql);
+    $sql="SELECT * FROM driver WHERE userName='$userName' AND password='$encriptedPassword'";
+    $result=$conn->query($sql);
 
-  if(!$row=$result->fetch_assoc()){
-    echo "Your username or password is incorrect";
-  }else{
-    $_SESSION['userId']=$row['userId'];
-  }
+    if(!$row=$result->fetch_assoc()){
+      $sql="SELECT * FROM customer WHERE userName='$userName' AND password='$encriptedPassword'";
+      $result=$conn->query($sql);
 
-  header("Location: ../home.php");
+      if(!$row=$result->fetch_assoc()){
+        echo "Your username or password is incorrect";
+      }else{
+        $_SESSION['userName']=$row['userName'];
+        $_SESSION['role']='customer';
+        header("Location: ../search.php");
+      }
+
+    }else{
+      $_SESSION['userName']=$row['userName'];
+      $_SESSION['role']='driver';
+      header("Location: ../search.php");
+    }
