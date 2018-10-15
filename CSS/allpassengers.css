@@ -13,11 +13,23 @@
     font-size: 20px;
 }
 .custom-logout{
+    margin: 5px;
     padding: 10px;
     color: white;
     border-radius: 5px;
     background-color: red;
 }
+.backbtn{
+
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    color:white;
+    padding:10px;
+    background-color: rgb(73, 73, 221);
+    border-radius:5px;
+}
+
 
 .signout-panel{
     text-align: center;

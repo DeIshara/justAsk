@@ -2,12 +2,12 @@
 
 include 'header.php';
 if(!isset($_SESSION['userName'])){
-  header("Location: login.php");
-
+  header("Location: include/logout.include.php");
 }
 else {
   $role= $_SESSION['role'];
 }
+
 /*$sql="SELECT amount FROM wallet WHERE userId='$userId'";
 $result=$conn->query($sql);
 $raw=$result->fetch_assoc();
@@ -52,21 +52,24 @@ if($userId==null){
     echo '<div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4 formpanel">
-        <form action="">
+        <form action="includes/addhire.include.php" method="POST" enctype="multipart/form-data">
           <label for="currentloc">Current Location :</label><br>
-          <input type="text" id="currentloc"><br>
+          <input type="text" id="currentLoc" name="currentLoc"><br>
 
-          <label for="destination">Travelling To :</label><br>
-          <input type="text" id="destination"><br>
+          <label for="travellingTo">Travelling To :</label><br>
+          <input type="text" id="travellingTo" name="travellingTo"><br>
 
           <label for="seats">Seats</label><br>
-          <input type="text" id="seats"><br>
-          
-          <label for="amount">Amount</label><br>
-          <input type="text" id="amount"><br>
+          <input type="text" id="seats" name="seats"><br>
 
-          <label for="depart">Departure</label><br>
-          <input type="time" id="depart"><br>
+          <label for="amount">Amount</label><br>
+          <input type="text" id="amount" name="amount"><br>
+
+          <label for="departureDate">Departure Date</label><br>
+          <input type="date" id="departureDate" name="departureDate"><br>
+
+          <label for="departureTime">Departure Time</label><br>
+          <input type="time" id="departureTime" name="departureTime"><br>
 
           <button class="submit-btn">Submit</button>
         </form>
@@ -85,7 +88,7 @@ if($userId==null){
     echo '<div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4 formpanel">
-        <form>
+        <form action="includes/search.include.php" method="POST" enctype="multipart/form-data">
               <label class="labels" for="from">From</label><br>
               <input type="text" placeholder="From" id="from" name="from" required><br>
 
@@ -99,27 +102,65 @@ if($userId==null){
 
     </div>
 
-    <div class="row driverlist">
-        <div class="col-md-4 photopanel">
-          <img src="Assets/bg.jpg" class="driverphoto" alt="">
-        </div>
-        <div class="col-md-4 driverdesc">
-          <div class="col-md-6">
-            Name:<br>
-            From:<br>
-            Destination:<br>
-            Depart.Time:<br>
-          </div>
-          <div class="col-md-6">
-            
-          </div>    
-        
-        </div>
-        <div class="col-md-4 amountpanel">
-          <p class="amount">Amount:</p>
-          <a class="driverdetails" href="driverdetails.php">View Driver</a>
-        </div>
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
     </div>';
+    $i=0;
+
+    while(isset($_GET["driverId".$i])){
+      //echo $_GET["driverId".$i];
+      $driverId=$_GET["driverId".$i];
+
+      $sql="SELECT * FROM driver WHERE driverId=$driverId";
+      $result=$conn->query($sql);
+      $row=$result->fetch_assoc();
+      $firstName=$row['firstName'];
+      $lastName=$row['lastName'];
+      $dId=$row['driverId'];
+
+      $sql="SELECT * FROM hire WHERE driverId=$driverId";
+      $result=$conn->query($sql);
+      $raw=$result->fetch_assoc();
+      $from=$raw['currentLocation'];
+      $to=$raw['travellingTo'];
+      $amount=$raw['amount'];
+      $time=$raw['departureTime'];
+
+      $imageurl=$row['driverPhotograph'];
+
+      $i++;
+      echo "<div class='row driverlist'>
+          <div class='col-md-4 photopanel'>
+            <img src='".$imageurl."' class='driverphoto' alt=''>
+          </div>
+          <div class='col-md-4 driverdesc'>
+            <div class='col-md-6'>
+              Name:$firstName $lastName<br>
+              From:$from<br>
+              Destination:$to<br>
+              Depart.Time:$time<br>
+            </div>
+            <div class='col-md-6'>
+
+            </div>
+
+          </div>
+          <div class='col-md-4 amountpanel'>
+            <p class='amount'>Amount:$amount</p>
+          
+          <form action='driverdetails.php' method='POST'>
+            <input type='hidden' name='driverId' value='".$dId."'>
+            <button>Driver details</button>
+          </form>
+
+
+          </div>
+      </div>";
+    }
   }
  ?>
 
@@ -127,15 +168,19 @@ if($userId==null){
 
 
   <!-- admin -->
-        <div class="row">
+  <?php
+    if ($role=='admin') {
+        echo '<div class="row">
           <div class="col-md-4"></div>
           <div class="col-md-4 formpanel">
-            <a class="adminlinks" href="http://">All drivers</a>
-            <a class="adminlinks" href="http://">Passengers</a>
-            <a class="adminlinks" href="http://">Requests</a>
+            <a class="adminlinks" href="alldrivers.php">All drivers</a>
+            <a class="adminlinks" href="allpassengers.php">Passengers</a>
+            <a class="adminlinks" href="driverrequests.php">Requests</a>
           </div>
           <div class="col-md-4"></div>
-        </div>
+        </div>';
+    }
+  ?>
 <!--  -->
 
   </div>

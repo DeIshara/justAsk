@@ -21,12 +21,10 @@ include 'header.php';
             <div class="col-md-3 col-sm-3 col-xs-12"></div>
             <div class="col-md-3 col-sm-3 col-xs-12"></div>
             <div class="col-md-3 col-sm-3 col-xs-12 login">
-                <a id="loginlink" href="login.php">Log In</a>
+                <a class="loginlink" href="login.php">Log In</a>
             </div>
         </div>
-        <div class="row">
-
-            <div class="custom-jumbotron">
+        <div class="row custom-jumbotron">
 
 
                 <div class="col-md-4"></div>
@@ -35,7 +33,7 @@ include 'header.php';
                         <h1>Just Ask</h1>
                         <p>Just ask for a ride!!!!</p>
                         <p>
-                            <a class="btn btn-primary btn-lg">Ask Now</a>
+                            <a class="btn btn-primary btn-lg" href="login.php">Ask Now</a>
                         </p>
                     </div>
 
@@ -43,13 +41,15 @@ include 'header.php';
                 <div class="col-md-4"></div>
 
 
-            </div>
+        
 
 
         </div>
         <div class="row aboutus">
                 <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h1 class="topic">SHARE YOUR RIDE..</h1>
+                </div>
                 <div class="col-md-4"></div>
         </div>
 
