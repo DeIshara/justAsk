@@ -60,10 +60,10 @@
                 <input type="text" placeholder="Vehicle" id="vehicle" name="vehicle" required><br>
 
                 <label class="labels" for="driverPhoto"><b>Photo</b></label><br>
-                <input type="file" placeholder="Photo"id="driverPhoto" name="driverPhoto" required><br>
+                <input type="file" placeholder="Photo" accept="image/jpeg" id="driverPhoto" name="driverPhoto" required><br>
 
                  <label class="labels" for="vehiclePhoto"><b>Vehicle photo</b></label><br>
-                <input type="file" placeholder="Vehicle photo"id="vehiclePhoto" name="vehiclePhoto" required><br>
+                <input type="file" placeholder="Vehicle photo"id="vehiclePhoto" accept="image/jpeg" name="vehiclePhoto" required><br>
 
                 <button>Sign In</button>
 

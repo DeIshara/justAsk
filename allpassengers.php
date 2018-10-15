@@ -1,3 +1,10 @@
+<?php
+  include 'header.php';
+//   if(isset($_SESSION['userName'])){
+//     header("Location: all.php");
+//   }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +25,8 @@
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
                 
             <div class="col-md-4 col-sm-4 col-xs-12 signout-panel"> 
-                <h2 class="greet">Hi Ashan ...</h2>         
-                <form action="">
+            <a class="backbtn" href="all.php">Back</a>     
+                <form action="includes/logout.include.php">
                     <button class="custom-logout">LogOut</button>
                 </form>
             </div>
@@ -27,30 +34,50 @@
         </div>
 
         <!-- userlist -->
-        <div class="row userlist">
-            <div class="col-md-6">
-                <div class="col-md-6 detaillabel">
-                    UserId<br>
-                    Name<br>
-                    Address<br>
-                    Email<br>
-                    Contact No
-                </div>
-                <div class="col-md-6 detailsview">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>  
-                </div>
-            </div>
-            <div class="col-md-6 deletebtnholder">
-                <form action="">
-                    <button class="delete-btn">Delete</button>
-                </form>
+        
+
+         <?php
+            
+            $sq="SELECT * FROM customer";
+            $result=$conn->query($sq);
+            
+            while ($row=$result->fetch_assoc()) {
+                echo "
+                    <div class='row userlist'>
+                        <div class='col-md-6'>
+                            <div class='col-md-6 detaillabel'>
+                                <p>UserId</p>
+                                <p> Name</p>
+                                <p>Address</p>
+                                <p>Email</p>
+                                <p>Contact No</p>
+                            </div>
+                            <div class='col-md-6 detailsview'>
+                                <p>".$row['customerId']."</p>
+                                <p>".$row['firstName']."</p>
+                                <p>".$row['address1']."</p>
+                                <p>".$row['email']."</p>
+                                <p>".$row['telephone']."</p>  
+                            </div>
+                        </div>
+                        <div class='col-md-6 deletebtnholder'>
+                            <form action='includes/customerDelete.include.php' method='POST'>
+                                <input type='hidden' name='customerId' value='".$row['customerId']."'>
+                                <button class='delete-btn'>Delete</button>
+                            </form>
+                            
+                        </div>
+                    </div>
                 
-            </div>
-        </div>
+                
+                
+                
+                ";
+            }
+            
+
+        ?>
+
 
     </div>
 

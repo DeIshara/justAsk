@@ -1,16 +1,33 @@
 .logopanel{
     background-color: black;
-    
+    text-align: center;
+    padding: 10px;
+}
+#logo{
+    max-width: 50%;
 }
 
-#logo{
-    width: 100%;
-} 
-
+.greet{
+    color:white !important;
+    font-size: 20px;
+}
 .custom-logout{
-    margin: 5px;
-    padding: 10px;
+    padding: 10px !important;
     color: white;
     border-radius: 5px;
     background-color: red;
 }
+
+.signout-panel{
+    text-align: center;
+}
+
+
+
+/* driver */
+
+.driverwindow{
+    background-color: rgb(158, 156, 153);
+    text-align: center;
+}
+

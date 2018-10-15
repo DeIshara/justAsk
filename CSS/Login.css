@@ -5,7 +5,10 @@ body{
     background-size: cover;
 }
 
-
+#topic{
+    color: white;
+    margin-top: 45%;
+}
 
 .custom-left{
     text-align: center;

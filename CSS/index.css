@@ -8,17 +8,28 @@
     width: 100%;
 } 
 
-#loginlink{
-    margin: 0 auto;
+.loginlink{
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: rgb(22, 109, 180);
+    border-radius:5px;
+    margin:30px auto;
 }
+.loginlink:hover{
+    text-decoration: none;
+}
+
+
+
 
 /* */
 
 /* jumbotron */
 .custom-jumbotron{
-    background-color: aquamarine;
-    border-radius: 10px;
-    width: 100%;
+    background-image: url(../Assets/frontbanner.jpg) !important;
 }
 .info{
     text-align: center;
@@ -26,8 +37,15 @@
     width: 50%;
 }
 
+.topic{
+    padding-top:50px;
+    margin: 0 auto;
+    font-family:"enter the grid";
+}
+
+
 .aboutus{
-    height: 300px;
+    height:250px;
     background-color:grey;
 }
 /* footer */

@@ -31,14 +31,20 @@
       exit();
     }
     else{
-      $encriptedPassword=md5($password);
-      $sql="INSERT INTO driver(firstName,lastName,userName,birthDay,NIC,telephone,vehicle,address1,address2,address3,email,password,status)
-            VALUES('$firstName','$lastName','$userName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword','0')";
-      $result=$conn->query($sql);
-      echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
-      //echo("Error description: " . mysqli_error($conn));
+        move_uploaded_file($_FILES["driverPhoto"]["tmp_name"],"../uploads/Users/" . $_FILES["driverPhoto"]["name"]);
+        $file1="uploads/Users/".$_FILES["driverPhoto"]["name"];
+
+        move_uploaded_file($_FILES["vehiclePhoto"]["tmp_name"],"../uploads/Vehicles/" . $_FILES["vehiclePhoto"]["name"]);
+        $file2="uploads/Vehicles/".$_FILES["vehiclePhoto"]["name"];
+
+        $encriptedPassword=md5($password);
+        $sql="INSERT INTO driver(firstName,lastName,userName,birthDay,NIC,telephone,vehicle,address1,address2,address3,email,password,status,driverPhotograph,vehiclePhotograph)
+              VALUES('$firstName','$lastName','$userName','$birthDay','$NIC','$telephone','$vehicle','$address1','$address2','$address3','$email','$encriptedPassword','0','$file1','$file2')";
+        $result=$conn->query($sql);
+        echo $firstName,$lastName,$birthDay,$NIC,$telephone,$vehicle,$address1,$address2,$address3,$email,$encriptedPassword;
+        //echo("Error description: " . mysqli_error($conn));
 
 
-      header("Location: ../login.php");
+        header("Location: ../login.php");
     }
   }
